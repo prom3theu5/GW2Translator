@@ -1,0 +1,28 @@
+﻿<Window x:Class="Translator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="390.688" Width="525" Topmost="True" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Background="Crimson" PreviewMouseDown="Grid_PreviewMouseDown_1">
+            <Label FontWeight="Bold" FontFamily="Segoue UI" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White">Semper Dius: Kodash Translator</Label>
+        </Grid>
+        <ComboBox Margin="20,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" Width="150" SelectedIndex="0" x:Name="TranslationType">
+            <ComboBoxItem>English to German</ComboBoxItem>
+            <ComboBoxItem>German to English</ComboBoxItem>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Stretch" Margin="20" TextWrapping="Wrap" VerticalAlignment="Stretch"  x:Name="TextToTranslate" Grid.Row="2"/>
+        <Button Content="TRANSLATE" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="Button_Click" Grid.Row="3" Margin="0,0,20,0" FontFamily="Segoue UI" Foreground="White" Background="ForestGreen"/>
+        <CheckBox Content="Auto Send To Game" Grid.Row="3" Foreground="White" Margin="0,5,110,0" VerticalAlignment="Top" HorizontalAlignment="Right" IsChecked="True" x:Name="SendToGame"></CheckBox>
+        <Label Content="Last Translation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Grid.Row="4" Margin="20,-5,0,0" Foreground="white"/>
+        <TextBox HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" x:Name="LastTranslation" Grid.Row="4" Margin="20"/>
+        <Button Content="EXIT" HorizontalAlignment="Right" Width="75" x:Name="CloseButton" Click="CloseButton_Click" Grid.Row="5" Margin="0,0,20,0" Foreground="White" Background="Red"/>
+    </Grid>
+</Window>
